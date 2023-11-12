@@ -37,4 +37,3 @@ test ('fill in all the form correctly', async ({page}) => {
     await expect(page.getByRole('button', {name: 'Pay now'})).toBeEnabled;
 });
 
-
