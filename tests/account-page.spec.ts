@@ -10,7 +10,7 @@ test.beforeEach("navigate to the account page from the plans page", async ({ pag
   await expect(page.getByText('Checkout')).toBeVisible();
 });
 
-test("test at checkout when the checkbox for Site Monitoring is checked", async ({ page }) => {
+test("test that the price got updated at checkout when the checkbox for Site Monitoring is checked", async ({ page }) => {
  const initialTotal = await page.locator('.total')
  const valueText = await initialTotal.innerText();
 const valueNumber = parseInt(valueText.replace(/[^\d.]/g, ''), 10);
